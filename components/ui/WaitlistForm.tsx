@@ -59,7 +59,7 @@ export default function WaitlistForm({
 
   return (
     <form onSubmit={handleSubmit} className={`flex flex-col gap-3 ${className}`}>
-      <div className={`flex flex-col gap-3 ${showExtras ? "" : "sm:flex-row"}`}>
+      <div className="flex flex-col gap-3">
         {showExtras && (
           <>
             <input
@@ -90,12 +90,12 @@ export default function WaitlistForm({
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           aria-label="Email address"
-          className="flex-1 rounded-lg border border-border bg-white px-4 py-3 text-base text-text-primary placeholder:text-text-secondary/60 focus:outline-none focus:ring-2 focus:ring-secondary"
+          className="w-full rounded-lg border border-border bg-white px-5 py-4 text-lg text-text-primary placeholder:text-text-secondary/60 focus:outline-none focus:ring-2 focus:ring-secondary"
         />
         <button
           type="submit"
           disabled={status === "loading"}
-          className="inline-flex items-center justify-center gap-2 rounded-lg bg-secondary px-6 py-3 font-medium text-primary transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2"
+          className="inline-flex items-center justify-center gap-2 rounded-lg bg-secondary px-5 py-3 text-sm font-medium text-primary transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2"
         >
           {status === "loading" ? (
             <span className="inline-block h-5 w-5 animate-spin rounded-full border-2 border-primary/30 border-t-primary" />

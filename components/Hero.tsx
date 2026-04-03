@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="flex flex-col gap-6">
           <h1 className="font-heading text-4xl font-bold leading-tight tracking-tight text-primary sm:text-5xl lg:text-6xl xl:text-[68px]">
             Pain relief that actually works.{" "}
-            <span className="text-text-secondary">
+            <span className="text-secondary">
               Prescribed by doctors. Delivered to your door.
             </span>
           </h1>
