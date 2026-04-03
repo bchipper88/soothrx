@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #1B2B3A;
+  --color-secondary: #C9A96E;
+  --color-accent: #4A9B8E;
+  --color-background: #FAFAF8;
+  --color-background-dark: #0F1A24;
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #6B7280;
+  --color-text-on-dark: #F5F5F3;
+  --color-border: #E5E2DC;
+  --color-success: #4A9B8E;
+  --font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "DM Sans", system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+}
+
+h1, h2 {
+  font-family: var(--font-heading);
+}
+
+/* Scroll animation base */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FAQ accordion */
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.faq-answer.open {
+  grid-template-rows: 1fr;
+}
+
+.faq-answer > div {
+  overflow: hidden;
+}
+
+/* Product tube float animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(-5deg); }
+  50% { transform: translateY(-12px) rotate(-5deg); }
+}
+
+.animate-float {
+  animation: float 3.5s ease-in-out infinite;
+}
