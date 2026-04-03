@@ -40,16 +40,14 @@ export default function Hero() {
 
         {/* Product visual */}
         <div className="flex items-center justify-center">
-          <div className="animate-float">
-            <Image
-              src="/product-tube.png"
-              alt="SoothRx prescription pain relief cream tube"
-              width={400}
-              height={600}
-              priority
-              className="h-[340px] w-auto md:h-[400px] lg:h-[440px]"
-            />
-          </div>
+          <Image
+            src="/product-tube.png"
+            alt="SoothRx prescription pain relief cream tube"
+            width={500}
+            height={500}
+            priority
+            className="w-full max-w-[400px] md:max-w-[440px] lg:max-w-[500px]"
+          />
         </div>
       </div>
     </section>
