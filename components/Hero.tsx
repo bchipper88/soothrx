@@ -1,4 +1,4 @@
-import ProductTube from "./ui/ProductTube";
+import Image from "next/image";
 import WaitlistForm from "./ui/WaitlistForm";
 
 export default function Hero() {
@@ -40,7 +40,16 @@ export default function Hero() {
 
         {/* Product visual */}
         <div className="flex items-center justify-center">
-          <ProductTube className="h-[340px] w-auto animate-float md:h-[400px] lg:h-[440px]" />
+          <div className="animate-float">
+            <Image
+              src="/product-tube.png"
+              alt="SoothRx prescription pain relief cream tube"
+              width={400}
+              height={600}
+              priority
+              className="h-[340px] w-auto md:h-[400px] lg:h-[440px]"
+            />
+          </div>
         </div>
       </div>
     </section>
