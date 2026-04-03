@@ -35,8 +35,14 @@ export default function WaitlistForm({
       }
 
       setStatus("success");
-      if (typeof window !== "undefined" && typeof window.fbq === "function") {
-        window.fbq("track", "Lead");
+      try {
+        if (window.fbq) {
+          window.fbq("track", "Lead");
+        } else {
+          new Image().src = "https://www.facebook.com/tr?id=1672375480422939&ev=Lead&noscript=1";
+        }
+      } catch {
+        // pixel not loaded
       }
     } catch (err) {
       setErrorMsg(err instanceof Error ? err.message : "Something went wrong");
