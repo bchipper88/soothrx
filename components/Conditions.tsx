@@ -42,7 +42,7 @@ export default function Conditions() {
                 href="#get-started"
                 className="mt-4 inline-block text-sm font-medium text-secondary hover:underline"
               >
-                Learn More&nbsp;&rarr;
+                Join the Waitlist&nbsp;&rarr;
               </a>
             </div>
           ))}

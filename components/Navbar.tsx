@@ -39,7 +39,7 @@ export default function Navbar() {
             href="#get-started"
             className="rounded-lg bg-secondary px-5 py-2.5 text-sm font-medium text-primary transition-all duration-200 hover:shadow-lg hover:scale-[1.02]"
           >
-            Get Started&nbsp;&rarr;
+            Join the Waitlist&nbsp;&rarr;
           </a>
         </div>
 
@@ -81,7 +81,7 @@ export default function Navbar() {
               className="mt-2 rounded-lg bg-secondary px-5 py-3 text-center text-base font-medium text-primary"
               onClick={() => setOpen(false)}
             >
-              Get Started&nbsp;&rarr;
+              Join the Waitlist&nbsp;&rarr;
             </a>
           </div>
         </div>

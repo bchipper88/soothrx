@@ -98,7 +98,7 @@ export default function Pricing() {
                 variant={plan.popular ? "primary" : "outline"}
                 className="mt-8 w-full"
               >
-                Get Started&nbsp;&rarr;
+                Join the Waitlist&nbsp;&rarr;
               </Button>
             </div>
           ))}

@@ -14,14 +14,10 @@ export default function FinalCTA() {
 
         <div className="mt-10">
           <WaitlistForm
-            buttonText="Start Your Free Assessment"
+            buttonText="Join the Waitlist — Founding Members Get 50% Off First Month"
             className="mx-auto max-w-md"
           />
         </div>
-
-        <p className="mt-6 text-sm text-secondary">
-          Founding members get 50% off their first month.
-        </p>
       </div>
     </section>
   );

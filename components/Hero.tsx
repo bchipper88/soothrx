@@ -18,10 +18,7 @@ export default function Hero() {
             condition, shipped monthly. No pills. No opioids. No waiting rooms.
           </p>
 
-          <WaitlistForm buttonText="Start Your Free Assessment" />
-          <p className="text-sm font-medium text-secondary">
-            Founding members get 50% off their first month.
-          </p>
+          <WaitlistForm buttonText="Join the Waitlist — Founding Members Get 50% Off First Month" />
 
           {/* Trust line */}
           <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-text-secondary">
