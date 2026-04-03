@@ -19,6 +19,9 @@ export default function Hero() {
           </p>
 
           <WaitlistForm buttonText="Start Your Free Assessment" />
+          <p className="text-sm font-medium text-secondary">
+            Founding members get 50% off their first month.
+          </p>
 
           {/* Trust line */}
           <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-text-secondary">
