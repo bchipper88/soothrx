@@ -1,28 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import { promises as fs } from "fs";
-import path from "path";
+import { createClient } from "@supabase/supabase-js";
 
-const DATA_FILE = path.join(process.cwd(), "waitlist.json");
-
-interface WaitlistEntry {
-  email: string;
-  name?: string;
-  condition?: string;
-  timestamp: string;
-}
-
-async function readEntries(): Promise<WaitlistEntry[]> {
-  try {
-    const data = await fs.readFile(DATA_FILE, "utf-8");
-    return JSON.parse(data);
-  } catch {
-    return [];
-  }
-}
-
-async function writeEntries(entries: WaitlistEntry[]): Promise<void> {
-  await fs.writeFile(DATA_FILE, JSON.stringify(entries, null, 2));
-}
+const supabase = createClient(
+  process.env.SUPABASE_URL!,
+  process.env.SUPABASE_ANON_KEY!
+);
 
 export async function POST(req: NextRequest) {
   try {
@@ -36,23 +18,21 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const entries = await readEntries();
-
-    if (entries.some((e) => e.email.toLowerCase() === email.toLowerCase())) {
-      return NextResponse.json(
-        { error: "This email is already on the waitlist." },
-        { status: 409 }
-      );
-    }
-
-    entries.push({
+    const { error } = await supabase.from("waitlist").insert({
       email: email.trim().toLowerCase(),
-      name: name?.trim() || undefined,
-      condition: condition?.trim() || undefined,
-      timestamp: new Date().toISOString(),
+      name: name?.trim() || null,
+      condition: condition?.trim() || null,
     });
 
-    await writeEntries(entries);
+    if (error) {
+      if (error.code === "23505") {
+        return NextResponse.json(
+          { error: "This email is already on the waitlist." },
+          { status: 409 }
+        );
+      }
+      throw error;
+    }
 
     return NextResponse.json({ success: true }, { status: 201 });
   } catch {
