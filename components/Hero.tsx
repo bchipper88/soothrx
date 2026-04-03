@@ -46,7 +46,7 @@ export default function Hero() {
             width={500}
             height={500}
             priority
-            className="w-full max-w-[400px] md:max-w-[440px] lg:max-w-[500px]"
+            className="w-full max-w-[400px] rounded-2xl md:max-w-[440px] lg:max-w-[500px]"
           />
         </div>
       </div>
