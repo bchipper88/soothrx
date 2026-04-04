@@ -30,7 +30,7 @@ const conditions = [
 export default function Conditions() {
   return (
     <section id="conditions" className="bg-white px-6 py-20 md:py-28">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-5xl">
         <h2 className="font-heading text-3xl font-bold text-primary sm:text-4xl md:text-5xl">
           Targeted relief for chronic pain
         </h2>
