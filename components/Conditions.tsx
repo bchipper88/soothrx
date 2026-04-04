@@ -46,7 +46,7 @@ export default function Conditions() {
                 alt={c.name}
                 width={800}
                 height={600}
-                className="h-48 w-full object-cover"
+                className="h-64 w-full object-cover"
               />
               <div className="p-8">
                 <h3 className="text-xl font-semibold text-primary">{c.name}</h3>
