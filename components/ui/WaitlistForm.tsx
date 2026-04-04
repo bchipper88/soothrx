@@ -67,28 +67,26 @@ export default function WaitlistForm({
     <form onSubmit={handleSubmit} className={`flex flex-col gap-3 ${className}`}>
       <div className="flex flex-col gap-3">
         {showExtras && (
-          <>
-            <input
-              type="text"
-              placeholder="First name (optional)"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="rounded-lg border border-border bg-white px-4 py-3 text-base text-text-primary placeholder:text-text-secondary/60 focus:outline-none focus:ring-2 focus:ring-secondary"
-            />
-            <select
-              value={condition}
-              onChange={(e) => setCondition(e.target.value)}
-              aria-label="Primary pain condition"
-              className="rounded-lg border border-border bg-white px-4 py-3 text-base text-text-primary focus:outline-none focus:ring-2 focus:ring-secondary"
-            >
-              <option value="">Primary pain condition (optional)</option>
-              <option value="joint">Joint / Arthritis Pain</option>
-              <option value="back">Back / Muscle Pain</option>
-              <option value="nerve">Nerve Pain (Neuropathy)</option>
-              <option value="other">Other</option>
-            </select>
-          </>
+          <input
+            type="text"
+            placeholder="First name (optional)"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="rounded-lg border border-border bg-white px-4 py-3 text-base text-text-primary placeholder:text-text-secondary/60 focus:outline-none focus:ring-2 focus:ring-secondary"
+          />
         )}
+        <select
+          value={condition}
+          onChange={(e) => setCondition(e.target.value)}
+          aria-label="Primary pain condition"
+          className="rounded-lg border border-border bg-white px-4 py-3 text-base text-text-primary focus:outline-none focus:ring-2 focus:ring-secondary"
+        >
+          <option value="">Primary pain condition (optional)</option>
+          <option value="joint">Joint / Arthritis Pain</option>
+          <option value="back">Back / Muscle Pain</option>
+          <option value="nerve">Nerve Pain (Neuropathy)</option>
+          <option value="other">Other</option>
+        </select>
         <input
           type="email"
           required

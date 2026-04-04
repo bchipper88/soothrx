@@ -14,8 +14,9 @@ export default function Hero() {
             </span>
           </h1>
           <p className="max-w-xl text-lg leading-relaxed text-text-secondary md:text-xl">
-            Prescription-strength compounded pain creams — personalized to your
-            condition, shipped monthly. No pills. No opioids. No waiting rooms.
+            Prescription-strength compounded pain creams for arthritis, back
+            pain, neuropathy, and sports injuries — shipped monthly. No pills.
+            No opioids. No waiting rooms.
           </p>
 
           <WaitlistForm buttonText="Join the Waitlist — Founding Members Get 50% Off First Month" />
